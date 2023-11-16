@@ -1,41 +1,31 @@
 /**
  * @param {number} n
  * @return {string[]}
- * There will have to be some improvements made to this currently the challenge isn't functioning as intended
+ * Corrections have been made to were Fizz, Buzz, FizzBuzz, and numbers are storing in the array and printing to the console
  */
 
 //let input = require("readline-sync");
-var fizzBuzz = function(n) {
+function fizzBuzzChallenge(n) {
 
     let fizzBuzzArray = [];
     const fizz = "Fizz";
     const buzz = "Buzz";
-    const fizzBuzz = "FizzBuzz"
+    const fizzBuzz = "FizzBuzz";
 
-    if(n % 3 === 0 && n % 5 === 0){
-        for(let i = 0; i < fizzBuzzArray.length; i++){
+    for(let i = 1; i <= n; i++){
+        if (i % 3 === 0 && i % 5 === 0){
             fizzBuzzArray.push(fizzBuzz);
-            fizzBuzzArray.toString();
         }
-    }
-    else if(n % 3 === 0){
-        for(let i = 0; i < fizzBuzzArray.length; i++){
+        else if (i % 3 === 0){
             fizzBuzzArray.push(fizz);
-            fizzBuzzArray.toString();
         }
-    }
-    else if(n % 5 === 0){
-        for(let i = 0; i < fizzBuzzArray.length; i++){
+        else if (i % 5 === 0){
             fizzBuzzArray.push(buzz);
-            fizzBuzzArray.toString();
-        }
-    }
-    else if(n % 3 !== n % 5){
-        for(let i = 0; i < fizzBuzzArray.length; i++){
-            fizzBuzzArray.push(n);
-            fizzBuzzArray.toString();
+        } else {
+            fizzBuzzArray.push(i);
         }
     }
     console.log(fizzBuzzArray);
     return fizzBuzzArray;
-};
+}
+console.log(fizzBuzzChallenge(87))
